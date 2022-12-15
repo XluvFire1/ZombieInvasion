@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
 
     public float spawnXRange = 8;
     public float spawnYRange = 10;
+    public int Health;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,9 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos = new Vector3(Random.Range(-spawnXRange, spawnXRange), spawnYRange, 0);
 
         Instantiate(enemyPrefabs[index], spawnPos, enemyPrefabs[index].transform.rotation);
+        if(Health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
