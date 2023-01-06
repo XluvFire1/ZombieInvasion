@@ -36,7 +36,7 @@ MonoBehaviour:
     m_SubscriptSize: 0.5
     m_UnderlineOffset: -9.410156
     m_UnderlineThickness: 4.8339844
-    m_StrikethroughOffset: 0
+    m_StrikethroughOffset: 30.8
     m_StrikethroughThickness: 4.8339844
     m_TabWidth: 16
   m_FontWeightTable:
@@ -2219,7 +2219,8 @@ MonoBehaviour:
     m_Height: 1
   m_FontFeatureTable:
     m_GlyphPairAdjustmentRecords: []
-  m_FallbackFontAssetTable: []
+  m_FallbackFontAssetTable:
+  - {fileID: 11400000}
   m_fontAssetCreationEditorSettings:
     sourceFontFileGUID: b0caca521600cf148b2b2f137b414e58
     faceIndex: 0
