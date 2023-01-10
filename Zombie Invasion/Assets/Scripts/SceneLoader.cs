@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    private bool isDead;
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -20,5 +21,11 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
-
+    public void LoadDeathScene()
+    {
+        if(isDead = true)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
 }
