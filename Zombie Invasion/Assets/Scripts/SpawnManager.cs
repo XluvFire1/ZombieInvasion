@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-
     public GameObject[] enemyPrefabs;
 
     public float spawnXRange = 8;

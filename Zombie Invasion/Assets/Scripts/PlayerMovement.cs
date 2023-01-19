@@ -5,22 +5,31 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-
+    public bool gamePlaying;
     public Rigidbody2D rb;
     public Camera cam;
 
     Vector2 movement;
     Vector2 mousePos;
-
-    //Update is called once per frame
+    public void Start()
+    {
+        gamePlaying = false;
+    }
+   
     void Update()
     {
+        
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
+    public void BeginGame()
+    {
+        gamePlaying = true;
 
+        TimerController.instance.BeginTimer();
+    }
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
