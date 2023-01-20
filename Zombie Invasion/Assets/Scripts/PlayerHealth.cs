@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public int health = 10;
     public bool isDead;
     public bool IsGameActive;
-
+    public GameObject SpawnManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
         {
             isDead = true;
             Debug.Log("Dead");
-            IsGameActive = false; 
+            IsGameActive = false;
         }
     }
 }
